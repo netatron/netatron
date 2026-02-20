@@ -1,0 +1,29 @@
+# Fly.io configuration for Netatron Frontend UI
+# https://fly.io/docs/reference/configuration/
+
+app = "netatron-ui"
+primary_region = "waw"
+
+[build]
+  dockerfile = "Dockerfile"
+  # Build args are passed via flyctl deploy --build-arg
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/health"
+
+[vm]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
+
