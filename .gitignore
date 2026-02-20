@@ -1,0 +1,80 @@
+# Dependencies
+node_modules/
+.venv/
+backend/.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment and secrets
+.env
+.env.*
+*.key
+*credentials*.json
+*service-account*.json
+*global-sun-*.json
+*-b76b48fbd18b.json
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.log
+*.zip
+*.csv
+*.bak
+temp.txt
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+backend/netatron.db
+
+# Storage and results
+storage/
+results/
+backend/results/
+
+# Documentation (keep only main README.md)
+*.md
+!README.md
+
+# Deployment scripts and configs
+scripts/
+staging/
+gcp-migration/
+docs/
+CV_*.md
+ARCHITECTURE_ASSESSMENT.md
+DEPLOYMENT.md
+GCP_MIGRATION_CONFIG.md
+
+# Duplicate frontend (if exists)
+netatronagent_frontend-main/
+
+# Test and cache
+backend/.pytest_cache/
+.pytest_cache/
+coverage/
+.coverage
+htmlcov/
+
+# Temporary files
+debug-*.txt
+debug-*.js
+debug-*.html
+prod-index-*.js
+prod-index.html
+status_tmp*.txt
+1
+
+# Backup files
+*.bak
+*.backup
+*.old
