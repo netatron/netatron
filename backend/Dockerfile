@@ -14,7 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend code
 COPY backend/ /app/backend/
-COPY cloudbuild-backend.yaml /app/
 
 # Set working directory to backend
 WORKDIR /app/backend
